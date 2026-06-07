@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-    PT - Órdenes de R
+    MVP - Órdenes de Reposición
 @endsection
 @push('css')
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -11,13 +11,11 @@
     @section('nom_pagina', 'Órdenes de Reposición')
     
     <div>
-
         @if(session('success'))
             <div class="alert alert-success text-center w-50 mx-auto">
                 {{ session('success') }}
             </div>
         @endif
-
         @if(session('error'))
             <div class="alert alert-danger text-center w-50 mx-auto">
                 {{ session('error') }}

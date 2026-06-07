@@ -10,14 +10,22 @@
 @section('contenido')
     @section('nom_pagina', 'Inventario')
     <div id="comp">
+        @if(session('success'))
+            <div class="alert alert-success text-center w-50 mx-auto">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger text-center w-50 mx-auto">
+                {{ session('error') }}
+            </div>
+        @endif
         <div id="subtitulos"><h2 class="text-center">Productos</h2></div>
         
-        <div class="text-center">
-        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearProductoModal">
-            <i class="fa-solid fa-plus text-white"></i> Nuevo Producto
-        </button></div> 
-        <div id="search-container" class="text-center mb-4 p-4">
-            <input type="text" id="campo-busq" class="form-control" placeholder="¿Desea buscar un producto por su nombre? Escríbalo aquí">                      
+        
+        <div id="search-container" class="text-center mb-4 p-4 mx-auto" style="border-collapse: collapse; width: 70%;">
+            <input type="text" id="campo-busq" class="form-control" placeholder="¿Desea buscar un producto por su nombre? Escríbalo aquí">
         </div>
         <main style="display: flex; justify-content: center;">
             <table class="text-center" style="border-collapse: collapse; width: 70%;">
@@ -27,7 +35,6 @@
                         <th>Stock Actual</th>
                         <th>Stock Mínimo</th>
                         <th>Diferencia</th>
-                        <th style="width: 18%;">Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="tabla-productos">
@@ -65,10 +72,6 @@
                                 </span>
                             @endif
                         </td>
-                        <td>
-                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editarAreaModal-{{ $prd->id }}">Editar</button>
-                            <button class="btn btn-sm btn-info btn-sm">Reponer</button>
-                        </td>
                     </tr>
                     @empty
                     <tr>
@@ -104,13 +107,10 @@
                         <td>{{ $ctg->nombre }}</td>
                         <td>{{ $ctg->productos_count }}</td>
                         <td>
-                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editarAreaModal-{{ $ctg->id }}">Editar</button>
-                            <button class="btn btn-sm btn-danger btn-sm"
-                                                        >
-                                                        Eliminar
-                            </button>
+                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editarCategoriaModal{{ $ctg->id }}">Editar</button>
                         </td>
                     </tr>
+                    @include('gestion_productos.modales.editar_categoria', ['ctg' => $ctg])
                     @empty
                     <tr>
                         <td colspan="3" class="text-center">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-    PT - Stock Crítico
+    MVP - Stock Crítico
 @endsection
 @push('css')
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
