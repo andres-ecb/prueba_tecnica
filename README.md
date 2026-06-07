@@ -16,6 +16,14 @@ stock crítico y generar una "Orden de Reposición" rápida». Este problema fue
 
 # Tecnologías Utilizadas
 - Laravel PHP Framework
+- ORM Eloquent (de Laravel)
+- PHP
 - MySQL
+
+# Ejecución
+- Tener instalado PHP, en su versión 8.3
+- Tener instalado Composer
+- Tener instalado Laravel PHP Framework
+- Tener una IDE como Visual Studio Code
 
 
