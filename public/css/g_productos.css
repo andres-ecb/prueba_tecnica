@@ -1,0 +1,19 @@
+h2{
+    color: blue;
+}
+
+.stock-alerta {
+    animation: parpadeoRojo 1.2s infinite;
+}
+
+@keyframes parpadeoRojo {
+    0% {
+        background-color: #ffe5e5;
+    }
+    50% {
+        background-color: #ffb3b3;
+    }
+    100% {
+        background-color: #ffe5e5;
+    }
+}

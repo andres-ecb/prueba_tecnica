@@ -1,0 +1,58 @@
+html, body {
+    min-height: 100%;
+    margin: 0;
+
+    padding: 0;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+    background-color:  whitesmoke !important;
+}
+
+h1{
+    text-align: center;
+    color:  #2C3E50;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+    background-color: whitesmoke;
+}
+
+
+.piedepagina {
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+
+footer {
+    color: #f1f1f1;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bolder;
+    padding: 40px;
+    background: linear-gradient(90deg, #1870ec 1%, #1870ec 88%, rgb(243, 232, 71) 100%);
+    background-size: 200% 100%;  /* Aumenta el tamaño del gradiente para que se pueda mover */
+    animation: footerGradientIntercalado 33s ease infinite; /* Cambia cada 4 segundos */
+}
+@keyframes footerGradientIntercalado {
+    0% {
+        background-position: 0% 0%; /* Comienza con el negro al inicio */
+    }
+    35% {
+        background-position: 100% 0%; /* Mueve el gradiente hacia el otro lado */
+    }
+    100% {
+        background-position: 0% 0%; /* Vuelve al inicio */
+    }
+}
