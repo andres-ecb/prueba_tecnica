@@ -7,6 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Contenido
+Este repositorio contiene la solución MVP al problema planteado: 
+«La cadena de retail FastStore pierde ventas diariamente porque no sabe cuándo un
+producto se agota en sus góndolas. Tu misión es construir una herramienta mínima
+viable (MVP) que permita al personal de bodega visualizar qué productos tienen un
+stock crítico y generar una "Orden de Reposición" rápida». Este problema fue planteado en los primeros tres puntos de la Prueba de Conocimiento Agaval.
+
+# Tecnologías Utilizadas
+- Laravel PHP Framework
+- MySQL
 
 
