@@ -1,4 +1,3 @@
-<!-- Modal Crear Categoría -->
 <div class="modal fade" id="crearCategoriaModal" tabindex="-1" role="dialog" aria-labelledby="crearCategoriaModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <form action="{{ route('categorias.store') }}" method="POST">

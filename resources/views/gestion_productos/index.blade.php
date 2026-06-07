@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('titulo')
-    PT - Gestión Productos
+    MVP - Inventario
 @endsection
 @push('css')
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -9,8 +9,7 @@
 @endpush
 @section('contenido')
     @section('nom_pagina', 'Inventario')
-    
-    <div>
+    <div id="comp">
         <div id="subtitulos"><h2 class="text-center">Productos</h2></div>
         
         <div class="text-center">
@@ -82,7 +81,7 @@
             </table>
         </main>
     </div>
-    <div>
+    <div id="comp">
         <div id="subtitulos"><h2 class="text-center">Categorías</h2></div>
         
         <div class="text-center">

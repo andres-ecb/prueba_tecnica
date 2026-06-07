@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\{Categoria, Producto};
-use App\Services\TextService;
+use App\Services\FiltradoTexto;
 
 class InventarioController extends Controller
 {
-    protected $textService;
-    public function __construct(TextService $textService)
+    protected $filtrado;
+    public function __construct(FiltradoTexto $filtrado)
     {
-        $this->textService = $textService;
+        $this->filtrado = $filtrado;
     }
     public function index()
     {
@@ -23,7 +23,7 @@ class InventarioController extends Controller
     public function store_categoria(Request $request)
     {
         $request->validate(['nombre' => 'required|string|max:100']);
-        $filtrado_nombre = $this->textService->filtrar_texto($request->nombre);
+        $filtrado_nombre = $this->filtrado->filtrar_texto($request->nombre);
 
 	    $exists = Categoria::whereRaw('LOWER(REPLACE(REPLACE(REPLACE(nombre, "á", "a"), "é", "e"), "í", "i")) = ?', [$filtrado_nombre])
                     ->exists();

@@ -82,10 +82,7 @@
         .menu-item:hover .submenu {
             display: block;
         }
-
-        
     </style>
-
     <div class="cuerpodelmenu">
         <div class="menu-logo">
             <a href="/">
@@ -94,34 +91,17 @@
         </div>
 
         <nav class="menu-nav">
-            
-            
-            <div class="menu-item {{ request()->routeIs('estructura_enc.index') || request()->routeIs('gestion_productos.index') || request()->routeIs('stock_critico.index') ? 'active' : '' }}">
+            <div class="menu-item {{ request()->routeIs('stock_critico.ordenes') || request()->routeIs('gestion_productos.index') || request()->routeIs('stock_critico.index') ? 'active' : '' }}">
                 <a href="#" class="menu-link">Gestión de Bodega</a>
                 <div class="submenu">
                     <a href="{{ route('gestion_productos.index') }}" class="{{ request()->routeIs('gestion_productos.index') ? 'active-sub' : '' }}">Inventario</a>
                     <a href="{{ route('stock_critico.index') }}" class="{{ request()->routeIs('stock_critico.index') ? 'active-sub' : '' }}">Stock Crítico</a>
                     <a href="{{ route('stock_critico.ordenes') }}" class="{{ request()->routeIs('stock_critico.ordenes') ? 'active-sub' : '' }}">Órdenes de Reposición</a>
-                    <a href="#">Gráficos</a>
                 </div>
             </div>
-
-            <div class="menu-item {{ request()->routeIs('panel_stats.index') ? 'active' : '' }}">
-                <a href="#" class="menu-link">Resultados</a>
-                <div class="submenu">
-                    
-                    <a href="" class="{{ request()->routeIs('panel_stats.index') ? 'active-sub' : '' }}">Panel de Resultados</a>
-                    <a href="#">Roles</a>
-                </div>
-            </div>
-            
             <div class="menu-item {{ request()->is('/') ? 'active' : '' }}">
                 <a href="/" class="menu-link">Inicio</a>
             </div>
-            
-
-            
-            
         </nav>
     </div>
 </header>

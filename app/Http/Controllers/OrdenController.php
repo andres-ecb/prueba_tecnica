@@ -25,7 +25,6 @@ class OrdenController extends Controller
             'producto_id' => 'required|exists:productos,id',
             'cantidad' => 'required|integer|min:1'
         ]);
-
         $existe_orden = OrdenReposicion::where('producto_id', $request->producto_id)->where('estado', 'Pendiente')->exists();
         $producto = Producto::findOrFail($request->producto_id);
 
@@ -40,11 +39,8 @@ class OrdenController extends Controller
             'cantidad' => $request->cantidad,
             'estado' => 'Pendiente'
         ]);
-
         
-        return redirect()->route('stock_critico.ordenes')
-        ->with(
-            'success',
+        return redirect()->route('stock_critico.ordenes')->with('success',
             'La orden de reposición para el producto "' . $producto->nombre . '" fue creada correctamente.'
         );
     }

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-class TextService
+class FiltradoTexto
 {
     public function filtrar_texto($texto)
     {

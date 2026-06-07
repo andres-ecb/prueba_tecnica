@@ -3,10 +3,10 @@ h2{
 }
 
 .stock-alerta {
-    animation: parpadeoRojo 1.2s infinite;
+    animation: parpadeo 1.2s infinite;
 }
 
-@keyframes parpadeoRojo {
+@keyframes parpadeo {
     0% {
         background-color: #ffe5e5;
     }
@@ -16,4 +16,8 @@ h2{
     100% {
         background-color: #ffe5e5;
     }
+}
+
+#comp{
+    margin: 5% auto;
 }
